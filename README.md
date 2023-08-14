@@ -370,3 +370,157 @@ SELECT * FROM customers WHERE phone_number IS NULL;
 
 SELECT * FROM customers WHERE phone_number IS NOT NULL;
 ```
+
+### Exercise 1
+
+1. From the customers table, select the first name and phone number of all the females who have a last name of Bluth.
+2. From the products table, select the name for all products that have a price greater than 3.00 or coffee origin of Sri Lanka.
+3. How many male customers don't have a phone number entered intothe customers table?
+
+### Solution 1
+
+```SQL
+USE coffee_store;
+-- 1. From the customers table, select the first name and phone number of all the females who have a last name of Bluth.
+SELECT * FROM customers;
+SELECT first_name, phone_number FROM customers WHERE gender = "F" AND first_name = "Bluth";
+-- 2. From the products table, select the name for all products that have a price greater than 3.00 or coffee origin of Sri Lanka.
+SELECT * FROM products;
+SELECT name From products WHERE price > 3.00 OR coffee_origin = 'Sri Lanka';
+-- 3. How many male customers don't have a phone number entered intothe customers table?
+SELECT * FROM customers;
+SELECT * FROM customers WHERE gender = 'M' AND phone_number IS NULL;
+SELECT COUNT(*) FROM customers WHERE gender = 'M' AND phone_number IS NULL;
+```
+
+### In, Not In
+
+```SQL
+USE coffee_store;
+SELECT * FROM customers;
+SELECT * FROM customers WHERE last_name IN('Taylor', 'Bluth', 'Armstrong');
+SELECT * FROM customers WHERE first_name NOT IN('Katie', 'John', 'George');
+```
+
+### Between
+
+```SQL
+USE coffee_store;
+SELECT * FROM orders;
+SELECT * FROM customers;
+
+SELECT product_id, customer_id, order_time From orders WHERE order_time BETWEEN '2017-01-01' AND '2017-01-07';
+SELECT product_id, customer_id, order_time From orders WHERE customer_id BETWEEN 5 AND 10;
+SELECT * FROM customers WHERE last_name BETWEEN 'A' AND 'L';
+```
+
+### Like
+
+```SQL
+USE coffee_store;
+
+/*
+% - any number of characters
+  - just one character
+*/
+SELECT * FROM customers;
+SELECT * FROM customers WHERE last_name LIKE 'W%';
+SELECT * FROM customers WHERE last_name LIKE '%o%';
+SELECT * FROM customers WHERE first_name LIKE '_o_';
+SELECT * FROM products;
+SELECT * FROM products WHERE price LIKE '3%';
+```
+
+### Order By
+
+```SQL
+USE coffee_store;
+
+SELECT * FROM products;
+SELECT * FROM products ORDER BY price ASC;
+SELECT * FROM products ORDER BY price DESC;
+
+SELECT * FROM customers;
+SELECT * FROM customers ORDER BY last_name ASC;
+SELECT * FROM customers ORDER BY last_name DESC;
+
+SELECT * FROM orders;
+SELECT * FROM orders WHERE customer_id = 1 ORDER BY order_time ASC;
+SELECT * FROM orders WHERE customer_id = 1 ORDER BY order_time DESC;
+```
+
+### Exercise 2
+
+1. From the products table, select the name and price of all products with a coffee origin equal to Colombia or Indonesia. Ordered by name form A-Z.
+2. From the orders table, select all the orders from February 2017 for customers with id's of 2, 4, 6 or 8.
+3. From the customers table, select the first name and phone number of all customers who's last name contains the pattern 'ar'
+
+### Solution 2
+
+```SQL
+USE coffee_store;
+-- 1. From the products table, select the name and price of all products with a coffee origin equal to Colombia or Indonesia. Ordered by name form A-Z.
+SELECT * FROM products;
+SELECT name, price FROM products WHERE coffee_origin IN('Colombia','Indonesia') ORDER BY name ASC;
+-- 2. From the orders table, select all the orders from February 2017 for customers with id's of 2, 4, 6 or 8.
+SELECT * FROM orders;
+SELECT * FROM orders WHERE customer_id IN (2, 4, 6, 8) AND order_time BETWEEN '2017-02-01' AND '2017-02-28';
+-- 3. From the customers table, select the first name and phone number of all customers who's last name contains the pattern 'ar'
+SELECT * FROM customers;
+SELECT first_name, phone_number FROM customers WHERE last_name LIKE '%ar%'
+```
+
+### Distinct
+
+```SQL
+USE coffee_store;
+SELECT coffee_origin FROM products;
+SELECT DISTINCT coffee_origin FROM products;
+
+SELECT DISTINCT customer_id FROM orders;
+SELECT DISTINCT customer_id, product_id FROM orders WHERE order_time BETWEEN '2017-02-01' AND '2017-02-28';
+```
+
+### Limit
+
+```SQL
+USE coffee_store;
+
+SELECT * FROM customers LIMIT 5;
+SELECT * FROM customers LIMIT 5 OFFSET 5;
+SELECT * FROM customers LIMIT 5 OFFSET 15;
+SELECT * FROM customers LIMIT 10 OFFSET 5;
+SELECT * FROM customers ORDER BY last_name LIMIT 10;
+```
+
+### Column Name Alias
+
+```SQL
+USE coffee_store;
+
+SELECT name AS coffee, price, coffee_origin AS country FROM products;
+
+SELECT * FROM products;
+```
+
+### Exercise 3
+
+1. From the customers table, select distinct last name and order alphabetically from A-Z.
+2. From the orders table, select the first 3 orders placed by customer with id 1, in February 2017.
+3. From the products table, select the name, price and coffee origin but rename the price to retail_price in the results set.
+
+### Solution 3
+
+```SQL
+USE coffee_store;
+
+-- 1. From the customers table, select distinct last name and order alphabetically from A-Z.
+SELECT * FROM customers;
+SELECT DISTINCT last_name FROM customers ORDER BY last_name;
+-- 2. From the orders table, select the first 3 orders placed by customer with id 1, in February 2017.
+SELECT * FROM orders;
+SELECT * FROM orders WHERE customer_id = 1 AND order_time BETWEEN '2017-02-01' AND '2017-02-28' ORDER BY order_time ASC LIMIT 3;
+-- 3. From the products table, select the name, price and coffee origin but rename the price to retail_price in the results set.
+SELECT * FROM products;
+SELECT name, price AS retail_price, coffee_origin FROM products;
+```
