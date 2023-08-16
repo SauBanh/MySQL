@@ -308,7 +308,7 @@ DELETE FROM <tablename> Where <columnname> = 'example'
 ```SQL
 INSERT INTO orders (product_id,customer_id,order_time) VALUES (1,1,'2017-01-01 08:02:11'),(1,2,'2017-01-01 08:05:16'),(5,12,'2017-01-01 08:44:34'),(3,4,'2017-01-01 09:20:02'),(1,9,'2017-01-01 11:51:56'),(6,22,'2017-01-01 13:07:10'),(1,1,'2017-01-02 08:03:41'),(3,10,'2017-01-02 09:15:22'),(2,2,'2017-01-02 10:10:10'),(3,13,'2017-01-02 12:07:23'),(1,1,'2017-01-03 08:13:50'),(7,16,'2017-01-03 08:47:09'),(6,21,'2017-01-03 09:12:11'),(5,22,'2017-01-03 11:05:33'),(4,3,'2017-01-03 11:08:55'),(3,11,'2017-01-03 12:02:14'),(2,23,'2017-01-03 13:41:22'),(1,1,'2017-01-04 08:08:56'),(3,10,'2017-01-04 11:23:43'),(4,12,'2017-01-05 08:30:09'),(7,1,'2017-01-06 09:02:47'),(3,18,'2017-01-06 13:23:34'),(2,16,'2017-01-07 09:12:39'),(2,14,'2017-01-07 11:24:15'),(4,5,'2017-01-08 08:54:11'),(1,1,'2017-01-09 08:03:11'),(6,20,'2017-01-10 10:34:12'),(3,3,'2017-01-10 11:02:11'),(4,24,'2017-01-11 08:39:11'),(4,8,'2017-01-12 13:20:13'),(1,1,'2017-01-14 08:27:10'),(4,15,'2017-01-15 08:30:56'),(1,7,'2017-01-16 10:02:11'),(2,10,'2017-01-17 09:50:05'),(1,1,'2017-01-18 08:22:55'),(3,9,'2017-01-19 09:00:19'),(7,11,'2017-01-19 11:33:00'),(6,12,'2017-01-20 08:02:21'),(3,14,'2017-01-21 09:45:50'),(5,2,'2017-01-22 10:10:34'),(6,24,'2017-01-23 08:32:19'),(6,22,'2017-01-23 08:45:12'),(6,17,'2017-01-23 12:45:30'),(2,11,'2017-01-24 08:01:27'),(1,1,'2017-01-25 08:05:13'),(6,11,'2017-01-26 10:49:10'),(7,3,'2017-01-27 09:23:57'),(7,1,'2017-01-27 10:08:16'),(3,18,'2017-01-27 10:13:09'),(4,19,'2017-01-27 11:02:40'),(3,10,'2017-01-28 08:03:21'),(1,2,'2017-01-28 08:33:28'),(1,12,'2017-01-28 11:55:33'),(1,13,'2017-01-29 09:10:17'),(6,6,'2017-01-30 10:07:13'),(1,1,'2017-02-01 08:10:14'),(2,14,'2017-02-02 10:02:11'),(7,10,'2017-02-02 09:43:17'),(7,20,'2017-02-03 08:33:49'),(4,21,'2017-02-04 09:31:01'),(5,22,'2017-02-05 09:07:10'),(3,23,'2017-02-06 08:15:10'),(2,24,'2017-02-07 08:27:26'),(1,1,'2017-02-07 08:45:10'),(6,11,'2017-02-08 10:37:10'),(3,13,'2017-02-09 08:58:18'),(3,14,'2017-02-10 09:12:40'),(5,4,'2017-02-10 11:05:34'),(1,2,'2017-02-11 08:00:38'),(3,8,'2017-02-12 08:08:08'),(7,20,'2017-02-12 09:22:10'),(1,1,'2017-02-13 08:37:45'),(5,2,'2017-02-13 12:34:56'),(4,3,'2017-02-14 08:22:43'),(5,4,'2017-02-14 09:12:56'),(3,5,'2017-02-15 08:09:10'),(6,7,'2017-02-15 09:05:12'),(1,8,'2017-02-15 09:27:50'),(2,9,'2017-02-16 08:51:12'),(3,10,'2017-02-16 13:07:46'),(4,11,'2017-02-17 08:03:55'),(4,12,'2017-02-17 09:12:11'),(5,10,'2017-02-17 11:41:17'),(6,18,'2017-02-17 13:05:56'),(7,19,'2017-02-18 08:33:27'),(1,17,'2017-02-19 08:12:31'),(1,1,'2017-02-20 09:50:17'),(3,5,'2017-02-20 09:51:29'),(4,6,'2017-02-20 10:43:39'),(3,1,'2017-02-21 08:32:17'),(1,1,'2017-02-21 10:30:11'),(3,2,'2017-02-21 11:08:45'),(4,3,'2017-02-22 11:46:32'),(2,15,'2017-02-22 13:35:16'),(6,13,'2017-02-23 08:34:48'),(4,24,'2017-02-24 08:32:03'),(2,13,'2017-02-25 08:03:12'),(7,17,'2017-02-25 09:34:23'),(7,23,'2017-02-25 11:32:54'),(5,12,'2017-02-26 11:47:34'),(6,4,'2017-02-27 12:12:34'),(1,1,'2017-02-28 08:59:22');
 
-INSERT INTO customers (first_name, last_name, gender, phone_number) VALUES ('Chris','Martin','M','01123147789'),('Emma','Law','F','01123439899'),('Mark','Watkins','M','01174592013'),('Daniel','Williams','M',NULL),('Sarah','Taylor','F','01176348290'),('Katie','Armstrong','F','01145787353'),('Michael','Bluth','M','01980289282'),('Kat','Nash','F','01176987789'),('Buster','Bluth','M','01173456782'),('Charlie',NULL,'F','01139287883'),('Lindsay','Bluth','F','01176923804'),('Harry','Johnson','M',NULL),('John','Smith','M','01174987221'),('John','Taylor','M',NULL),('Emma','Smith','F','01176984116'),('Gob','Bluth','M','01176985498'),('George','Bluth','M','01176984303'),('Lucille','Bluth','F','01198773214'),('George','Evans','M','01174502933'),('Emily','Simmonds','F','01899284352'),('John','Smith','M','01144473330'),('Jennifer',NULL,'F',NULL),('Toby','West','M','01176009822'),('Paul','Edmonds','M','01966947113');}
+INSERT INTO customers (first_name, last_name, gender, phone_number) VALUES ('Chris','Martin','M','01123147789'),('Emma','Law','F','01123439899'),('Mark','Watkins','M','01174592013'),('Daniel','Williams','M',NULL),('Sarah','Taylor','F','01176348290'),('Katie','Armstrong','F','01145787353'),('Michael','Bluth','M','01980289282'),('Kat','Nash','F','01176987789'),('Buster','Bluth','M','01173456782'),('Charlie',NULL,'F','01139287883'),('Lindsay','Bluth','F','01176923804'),('Harry','Johnson','M',NULL),('John','Smith','M','01174987221'),('John','Taylor','M',NULL),('Emma','Smith','F','01176984116'),('Gob','Bluth','M','01176985498'),('George','Bluth','M','01176984303'),('Lucille','Bluth','F','01198773214'),('George','Evans','M','01174502933'),('Emily','Simmonds','F','01899284352'),('John','Smith','M','01144473330'),('Jennifer',NULL,'F',NULL),('Toby','West','M','01176009822'),('Paul','Edmonds','M','01966947113');
 ```
 
 ## Selecting from a Table
@@ -524,3 +524,322 @@ SELECT * FROM orders WHERE customer_id = 1 AND order_time BETWEEN '2017-02-01' A
 SELECT * FROM products;
 SELECT name, price AS retail_price, coffee_origin FROM products;
 ```
+
+## Selecting From Multiple Tables
+
+### Inner Join
+
+```SQL
+USE coffee_store;
+
+SELECT * FROM products;
+SELECT * FROM orders;
+
+SELECT name, order_time FROM orders INNER JOIN products ON orders.product_id = products.id;
+SELECT products.name, orders.order_time FROM orders INNER JOIN products ON orders.product_id = products.id;
+SELECT p.name, o.order_time FROM orders o JOIN products p ON o.product_id = p.id;
+SELECT p.name,p.price, o.order_time FROM orders o JOIN products p ON o.product_id = p.id WHERE o.product_id = 5 ORDER BY o.order_time;
+```
+
+### Left Join
+
+```SQL
+USE coffee_store;
+/*
+UPDATE orders SET customer_id = 1 Where id = 1;
+*/
+UPDATE orders SET customer_id = 1 Where id = 1;
+UPDATE orders SET customer_id = NULL Where id = 1;
+
+SELECT * FROM customers;
+SELECT * FROM orders;
+
+SELECT o.id, c.phone_number, c.last_name, o.order_time FROM orders o LEFT JOIN customers c ON o.customer_id = c.id ORDER BY o.order_time LIMIT 10;
+SELECT o.id, c.phone_number, c.last_name, o.order_time FROM customers c LEFT JOIN orders o ON c.id = o.customer_id ORDER BY o.order_time LIMIT 10;
+```
+
+### Right Join
+
+```SQL
+USE coffee_store;
+/*
+UPDATE orders SET customer_id = 1 Where id = 1;
+*/
+UPDATE orders SET customer_id = 1 Where id = 1;
+UPDATE orders SET customer_id = NULL Where id = 1;
+
+SELECT * FROM customers;
+SELECT * FROM orders;
+
+SELECT o.id, c.phone_number, c.last_name, o.order_time FROM orders o LEFT JOIN customers c ON o.customer_id = c.id ORDER BY o.order_time LIMIT 10;
+SELECT o.id, c.phone_number, c.last_name, o.order_time FROM customers c RIGHT JOIN orders o ON c.id = o.customer_id ORDER BY o.order_time LIMIT 10;
+```
+
+### Joining more than Two Tables
+
+```SQL
+USE coffee_store;
+
+SELECT * FROM products;
+SELECT * FROM customers;
+SELECT * FROM orders;
+
+SELECT p.name, p.price, c.first_name, c.last_name, o.order_time FROM products p JOIN orders o ON p.id = o.product_id JOIN customers c ON c.id = o.customer_id;
+SELECT p.name, p.price, c.first_name, c.last_name, o.order_time FROM products p JOIN orders o ON p.id = o.product_id JOIN customers c ON c.id = o.customer_id WHERE c.last_name = 'Martin' ORDER BY o.order_time;
+```
+
+### Exercise 4
+
+1. Select the order id and customers phone number for all orders of product id 4.
+2. Select product name and order time for filter coffees sold between January 15th 2017.
+3. Select the product name and price and order time for all orders from females in January
+
+### Solution 4
+
+```SQL
+USE coffee_store;
+
+SELECT * FROM products;
+SELECT * FROM orders;
+SELECT * FROM customers;
+
+-- 1. Select the order id and customers phone number for all orders of product id 4.
+SELECT o.id, c.phone_number FROM orders o INNER JOIN customers c ON o.customer_id = c.id WHERE o.product_id = 4;
+-- 2. Select product name and order time for filter coffees sold between January 15th 2017.
+-- SELECT p.name, o.order_time FROM orders o LEFT JOIN  products p ON o.product_id = p.id WHERE o.order_time BETWEEN '2017-01-15' AND '2017-02-14' AND p.name = 'Filter';
+SELECT p.name, o.order_time FROM products p JOIN  orders o ON p.id = o.product_id WHERE p.name = 'Filter' AND o.order_time BETWEEN '2017-01-15' AND '2017-02-14';
+-- 3. Select the product name and price and order time for all orders from females in January
+-- SELECT p.name, p.price, o.order_time FROM products p INNER JOIN orders o ON p.id = o.product_id INNER JOIN customers c ON o.customer_id = c.id WHERE o.order_time BETWEEN '2017-01-01' AND '2017-01-31' AND c.gender = 'F' ;
+SELECT p.name, p.price, o.order_time FROM products p INNER JOIN orders o ON p.id = o.product_id INNER JOIN customers c ON o.customer_id = c.id WHERE c.gender = 'F' AND o.order_time BETWEEN '2017-01-01' AND '2017-01-31';
+```
+
+## Database Designer
+
+### Normalization - What is it?
+
+Normalization is the process of efficiently organizing data in a database
+Why?
+
+-   To eliminate redundant data
+-   To only store related data in a table
+
+This is an example of a table that is not properly normalized
+![Alt text](image.png)
+
+Benefits:
+
+-   Reduce storage space.
+-   Reduce insert, update and deletion anomalies.
+-   Improve query performance.
+
+Levels of normalization:
+
+-   1st Normal Form(1NF).
+-   2nd Normal Form(2NF).
+-   3rd Normal Form(3NF).
+-   Boyce and Codd Normal Form (BCNF).
+
+### 1st Normal Form (1NF)
+
+Tables are in 1NF if:
+
+-   No repeated rows of data.
+-   Columns only contain a single value.
+-   The table has a primary key.
+
+`EXAMPLE:`
+`wrong table`
+![Alt text](image-1.png)
+`correct table`
+![Alt text](image-2.png)
+
+### 2nd Normal Form (2NF)
+
+Tables are in 2NF if:
+
+-   They conform to 1 NF.
+-   Every column that is not a primary key of the table is dependent on the whole of the primary key
+
+`EXAMPLE:`
+`wrong table`
+![Alt text](image-3.png)
+`correct table`
+![Alt text](image-4.png)
+![Alt text](image-5.png)
+
+### 3rd Normal Form (3NF)
+
+Tables are in 3NF if:
+
+-   They conform to 2 NF.
+-   Every column that is not a primary key is only dependent on the whole of the primary key.
+
+`EXAMPLE:`
+`wrong table`
+![Alt text](image-6.png)
+`correct table`
+![Alt text](image-7.png)
+![Alt text](image-8.png)
+
+### Relationships
+
+Tables are related through primary and foreign keys.
+One to one relationship.
+One to many relationship.
+Many to many relationship.
+
+### Relationships - One to One
+
+Where a key to one table aqqears no more than once as the key in another table and vice versa.
+
+`EXAMPLE:`
+![Alt text](image-9.png)
+
+### Relationships - One to Many
+
+Where a primary key of one table can be in multiple rows of a foreign key column of another table
+`EXAMPLE:`
+![Alt text](image-10.png)
+
+### Relationships - Many to Many
+
+Where two tables can have many instances of each other
+`EXAMPLE:`
+![Alt text](image-11.png)
+
+### Constraints
+
+-   NOT NULL - A column can't contain any null values.
+-   UNIQUE - A column can't contain any duplicate values of data.
+-   PRIMARY KEY - A culumn that uniquely identifies each row of data.
+-   FOREIGN KEY - A culumn which is related to a primary key in another table.
+
+## Creating a Cinema Booking System Database
+
+### Database Schema Overview
+
+![Alt text](image-12.png)
+
+### Create Films Table
+
+```SQL
+CREATE DATABASE cinema_booking_system;
+
+USE cinema_booking_system;
+
+CREATE TABLE films(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(45) NOT NULL UNIQUE,
+    length_min INT NOT NULL
+);
+
+SHOW TABLES;
+
+SELECT * FROM films;
+
+DESCRIBE films;
+```
+
+### Create Customers Table
+
+```SQL
+CREATE DATABASE cinema_booking_system;
+
+USE cinema_booking_system;
+
+CREATE TABLE films(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(45) NOT NULL UNIQUE,
+    length_min INT NOT NULL
+);
+
+CREATE TABLE customers(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(45),
+    last_name VARCHAR(45) NOT NULL,
+    email VARCHAR(45) NOT NULL UNIQUE
+);
+
+SHOW TABLES;
+
+SELECT * FROM customers;
+
+DESCRIBE customers;
+```
+
+### Create Rooms Table
+
+```SQL
+CREATE DATABASE cinema_booking_system;
+
+USE cinema_booking_system;
+
+CREATE TABLE films(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(45) NOT NULL UNIQUE,
+    length_min INT NOT NULL
+);
+
+CREATE TABLE customers(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(45),
+    last_name VARCHAR(45) NOT NULL,
+    email VARCHAR(45) NOT NULL UNIQUE
+);
+
+CREATE TABLE rooms(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(45) NOT NULL,
+    no_seats INT NOT NULL
+);
+
+SHOW TABLES;
+
+SELECT * FROM rooms;
+
+DESCRIBE rooms;
+```
+
+### Create Screenings Table
+
+```SQL
+CREATE DATABASE cinema_booking_system;
+
+USE cinema_booking_system;
+
+CREATE TABLE films(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(45) NOT NULL UNIQUE,
+    length_min INT NOT NULL
+);
+
+CREATE TABLE customers(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(45),
+    last_name VARCHAR(45) NOT NULL,
+    email VARCHAR(45) NOT NULL UNIQUE
+);
+
+CREATE TABLE rooms(
+	id int PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(45) NOT NULL,
+    no_seats INT NOT NULL
+);
+
+CREATE TABLE screenings(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    film_id INT NOT NULL,
+    room_id INT NOT NULL,
+    start_time DATETIME NOT NULL,
+    FOREIGN KEY (film_id) REFERENCES films(id),
+	FOREIGN KEY (room_id) REFERENCES rooms(id)
+);
+
+SHOW TABLES;
+
+SELECT * FROM screenings;
+
+DESCRIBE screenings;
+```
+
+### Create Seats Table
